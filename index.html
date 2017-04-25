@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="flowplayer/flowplayer-3.2.11.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--第一种方法-->
+   <a href="f1c3140516~1.flv" style="display: block; width: 400px; height: 300px"   id="tl_player">
+    </a>
+    <script>
+        flowplayer("tl_player", "flowplayer/flowplayer-3.2.12.swf",{
+			    clip:  {
+			        autoPlay: true,       //是否自动播放，默认true
+			        autoBuffering: true     //是否自动缓冲视频，默认true
+			    },
+                playlist: [//播放列表
+                    {
+                        url: "img/video.jpg",//默认显示图片（如果没有这显示播放视频的第一个画面）
+                          //duration: 1,//持续时间
+                        scaling: 'orig'//缩放
+                    },
+                    {
+                        url: 'f1c3140516~1.flv',//需要播放的文件
+                        autoPlay: false
+                    }
+                  ]
+        });
+    </script>
+
+    <!--<br />
+    第二种方法
+      <div id="tl_player" style="width: 670px; height: 450px;">
+    </div>
+    <script>
+        flowplayer("tl_player", "/js/flowplayer/flowplayer-3.2.12.swf", { clip: { url: "/Video/story.flv", autoPlay: false, autoBuffering: true} });
+    </script>-->
+</body>
+</html>
